@@ -9,10 +9,10 @@ import { revalidatePath } from "next/cache";
 export default async function page({params}) {
 
     
-    
-    const details = (await sql`select * from users where userid = ${params.userId}`).rows
+    const details = (await sql`select * from users where username = ${params.userId}`).rows
 
     console.log(details)
+
     async function handleProfile(formData) {
         'use server'
 
@@ -24,15 +24,15 @@ export default async function page({params}) {
 
         console.log(id, location, profileBio)
 
-        // await sql`UPDATE users set location = ${location}, set profileBio = ${profileBio} where userId = ${params.id}`
+        await sql`UPDATE users set location = ${location}, set profileBio = ${profileBio} where userId = ${params.id}`
 
-        // revalidatePath('/')
-        // redirect('/')
+        revalidatePath('/')
+        redirect('/')
     }
 
     return (
         <main className="flex flex-col items-center pt-4">
-            <h1 className="text-3xl">USERS</h1>
+            <h1 className="text-3xl">Update your profile details</h1>
             {/* <UserProfile /> */}
             <form action={handleProfile} className="flex flex-col gap-4 mt-4">
                 <div className="flex gap-4">

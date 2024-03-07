@@ -4,12 +4,12 @@ create table feed (
     content text,
     likes int,
     uploaded text,
-    userID references users(id)
+    userid references users(clerkId)
 )
 
 create table users (
-    id serial primary key,
-    userId text,
+    clerkId primary key,
+    username text,
     location text,
     bio text,
     followers int,
