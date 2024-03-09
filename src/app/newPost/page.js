@@ -8,12 +8,15 @@ import { currentUser, auth } from "@clerk/nextjs";
 
 export default async function page() {
 
-    const user = auth()
-    const current = currentUser()
+    const current = await currentUser()
 
-    const clerkId = user.userId
-    console.log(clerkId)
+    const username = current.username
 
+    const user = (await sql`select user_id from users where username = ${username}`).rows
+
+    const id = user[0].user_id
+
+    // console.log(current)
 
     async function handlePost(formData) {
         'use server'
@@ -25,7 +28,7 @@ export default async function page() {
 
         // console.log(title, content, date)
 
-        await sql`INSERT INTO feed (feedtitle, content, likes, uploaded, userid) VALUES (${title}, ${content}, 0, ${date}, ${clerkId})`
+        await sql`INSERT INTO feed (feedtitle, content, likes, uploaded, userid) VALUES (${title}, ${content}, 0, ${date}, ${id})`
 
         revalidatePath('/feed')
         redirect('/feed')

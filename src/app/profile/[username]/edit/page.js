@@ -32,7 +32,7 @@ export default async function page({params}) {
 
     return (
         <main className="flex flex-col items-center pt-4">
-            <h1 className="text-3xl">Update your profile details</h1>
+            <h1 className="text-3xl">Update profile details</h1>
             {/* <UserProfile /> */}
             <form action={handleProfile} className="flex flex-col gap-4 mt-4">
                 <div className="flex gap-4">

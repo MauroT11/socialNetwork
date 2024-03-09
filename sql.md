@@ -1,14 +1,14 @@
 create table feed (
-    id serial primary key,
-    feedTitle varchar(50),
+    post_id serial primary key,
+    feedTitle text,
     content text,
     likes int,
     uploaded text,
-    userid references users(clerkId)
+    userid references users(user_id)
 )
 
 create table users (
-    clerkId primary key,
+    user_id serial primary key,
     username text,
     location text,
     bio text,

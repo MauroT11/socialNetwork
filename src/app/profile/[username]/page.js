@@ -19,7 +19,7 @@ export default async function page() {
 
     return (
         <main className="flex flex-col items-center pt-4">
-            <h1 className="text-3xl">{username} details</h1>
+            <h1 className="text-3xl">{username} Profile</h1>
             
             {details.map((detail) => (
                 <div key={detail.clerkid} className="mb-8">
