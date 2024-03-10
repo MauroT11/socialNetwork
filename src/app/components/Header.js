@@ -5,6 +5,7 @@ import { SignInButton } from "@clerk/nextjs";
 import { IoHome, IoCreate } from "react-icons/io5";
 import Image from "next/image";
 import { auth, currentUser, useUser } from "@clerk/nextjs";
+import { MdOutlineRssFeed } from "react-icons/md";
 
 export default async function Header() {
 
@@ -12,13 +13,13 @@ export default async function Header() {
     
     if (!userId) {
         return (
-            <header className="grid grid-cols-3 bg-gradient-to-r from-red-500 via-purple-500 to-blue-500 text-white py-4 justify-items-center border-b-4 border-zinc-200">
+            <header className={`font-sans grid grid-cols-3 bg-gradient-to-r from-red-500 via-purple-500 to-blue-500 text-white py-4 justify-items-center border-b-4 border-zinc-200`}>
 
             <div className="flex text-center">
                     <nav>
                         <ul className="flex gap-8 items-center text-4xl">
                             <Link href={'/'} className="hover:underline"><IoHome /></Link>
-                            <Link href={'/feed'} className="hover:underline">Feed</Link>
+                            <Link href={'/feed'} className="hover:underline"><MdOutlineRssFeed /></Link>
                             <Link href={`/newPost`} className="hover:underline"><IoCreate /></Link>
                         </ul>
                     </nav>
@@ -37,7 +38,7 @@ export default async function Header() {
                 <nav>
                     <ul className="flex gap-6 items-center text-4xl">
                         <Link href={'/'} className="hover:underline"><IoHome /></Link>
-                        <Link href={'/feed'} className="hover:underline">Feed</Link>
+                        <Link href={'/feed'} className="hover:underline"><MdOutlineRssFeed /></Link>
                         <Link href={`/newPost`} className="hover:underline"><IoCreate /></Link>
                     </ul>
                 </nav>

@@ -6,10 +6,7 @@ export default function Page() {
 
     return (
         <main className="flex flex-col items-center justify-center ">
-            <div className="m-8">
-                <SignUp afterSignUpUrl={`/newUser`}/>
-            </div>
-        
+            <SignUp afterSignUpUrl="/newProfile" />
         </main>
   )
 }

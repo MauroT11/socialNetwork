@@ -15,7 +15,7 @@ export default async function page() {
     
     const details = (await sql`select * from users where username = ${username}`).rows
 
-    console.log(details)
+    // console.log(details)
 
     return (
         <main className="flex flex-col items-center pt-4">

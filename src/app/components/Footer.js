@@ -7,7 +7,7 @@ export default function Footer() {
             </div>
             <ul className="flex flex-wrap items-center mt-3 text-lg font-medium sm:mt-0" >
                 <li>
-                    <a href="#" className="hover:underline me-4 md:me-6">Github</a>
+                    <a href="https://github.com/MauroT11" target="_blank" className="hover:underline me-4 md:me-6">Github</a>
                 </li>
                 <li>
                     <a href="#" className="hover:underline me-4 md:me-6">LinkedIn</a>

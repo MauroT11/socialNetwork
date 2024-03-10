@@ -1,10 +1,11 @@
-import { Inter } from "next/font/google";
+import { Inter, Lobster } from "next/font/google";
 import { ClerkProvider } from "@clerk/nextjs";
 import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
+const lobster = Lobster({ subsets: ["latin"], weight: '400'});
 
 export const metadata = {
   title: "Network",
