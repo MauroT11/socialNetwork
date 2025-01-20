@@ -8,10 +8,6 @@ Welcome to **NetworkNest** — a modern and intuitive networking web application
 - **Profile Viewing**: Browse user profiles to learn more about other members of the NetworkNest community.
 - **Interactive Interface**: A sleek, user-friendly design that ensures smooth navigation and engagement.
 
-## Screenshots
-
-*(Add screenshots here to showcase your application interface)*
-
 ## Getting Started
 
 Follow these steps to get a copy of NetworkNest up and running on your local machine for development and testing purposes.
